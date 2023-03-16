@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto:wght@700&display=swap");
+
+body {
+  background-color: rgb(21, 21, 21);
+  overflow: hidden;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title > h1 {
+  color: white;
+  font-family: "Roboto", monospace;
+  font-size: 10vw;
+  transform: translate(0vw, 5vw);
+}
+
+.title > h3 {
+  color: white;
+  transform: translate(0vw, -1vw);
+  font-family: "Roboto", monospace;
+  font-weight: lighter;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.input-wrapper {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.input-wrapper > input {
+  color: white;
+  background-color: transparent;
+  border-radius: 25px;
+  border: solid;
+  border-radius: 25px;
+  width: 500px;
+  height: 3vw;
+  text-indent: 15px;
+  outline: none;
+}
+
+.input-wrapper > button {
+  color: white;
+  background-color: rgb(30, 30, 30);
+  border-radius: 25px;
+  border: none;
+  border-radius: 15px;
+  width: 250px;
+  height: 5vw;
+  text-indent: 15px;
+  outline: none;
+  transform: translate(0vw, 1vw);
+  transition: 0.3s;
+  font-size: 25px;
+  font-family: "Roboto", monospace;
+  cursor: pointer;
+}
+
+.input-wrapper > button:hover {
+  color: white;
+  background-color: rgb(30, 30, 30);
+  border-radius: 25px;
+  border: none;
+  border-radius: 15px;
+  width: 275px;
+  height: 5.5vw;
+  text-indent: 15px;
+  outline: none;
+  transform: translate(0vw, 1vw);
+}
+
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+  .input-wrapper > input {
+    color: white;
+    background-color: transparent;
+    border-radius: 25px;
+    border: solid;
+    border-radius: 25px;
+    width: 300px;
+    height: 6.5vw;
+    text-indent: 15px;
+    transform: translate(0vw, 30vw);
+    outline: none;
+  }
+  .input-wrapper > button {
+    color: white;
+    background-color: rgb(30, 30, 30);
+    border-radius: 25px;
+    border: none;
+    border-radius: 15px;
+    width: 250px;
+    height: 20vw;
+    text-indent: 15px;
+    outline: none;
+    transform: translate(0vw, 40vw);
+    transition: 0.3s;
+    font-size: 25px;
+    font-family: "Roboto", monospace;
+    cursor: pointer;
+  }
+
+  .input-wrapper > button:hover {
+    color: white;
+    background-color: rgb(30, 30, 30);
+    border-radius: 25px;
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+    height: 20.5vw;
+    text-indent: 15px;
+    outline: none;
+    transform: translate(0vw, 40vw);
+  }
+
+  .title > h1 {
+    color: white;
+    font-family: "Roboto", monospace;
+    font-size: 20vw;
+    transform: translate(0vw, 30vw);
+  }
+  .title > h3 {
+    color: white;
+    transform: translate(0vw, 20vw);
+    font-family: "Roboto", monospace;
+    font-weight: lighter;
+    font-size: 15px;
+    font-style: italic;
+  }
+}
+
+@media only screen and (max-width: 414px) and (max-height: 896px) {
+  .input-wrapper > input {
+    color: white;
+    background-color: transparent;
+    border-radius: 25px;
+    border: solid;
+    border-radius: 25px;
+    width: 300px;
+    height: 6.5vw;
+    text-indent: 15px;
+    transform: translate(0vw, 45vw);
+    outline: none;
+  }
+  .input-wrapper > button {
+    color: white;
+    background-color: rgb(30, 30, 30);
+    border-radius: 25px;
+    border: none;
+    border-radius: 15px;
+    width: 250px;
+    height: 20vw;
+    text-indent: 15px;
+    outline: none;
+    transform: translate(0vw, 50vw);
+    transition: 0.3s;
+    font-size: 25px;
+    font-family: "Roboto", monospace;
+    cursor: pointer;
+  }
+
+  .input-wrapper > button:hover {
+    color: white;
+    background-color: rgb(30, 30, 30);
+    border-radius: 25px;
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+    height: 20.5vw;
+    text-indent: 15px;
+    outline: none;
+    transform: translate(0vw, 50vw);
+  }
+
+  .title > h1 {
+    color: white;
+    font-family: "Roboto", monospace;
+    font-size: 20vw;
+    transform: translate(0vw, 45vw);
+  }
+  .title > h3 {
+    color: white;
+    transform: translate(0vw, 40vw);
+    font-family: "Roboto", monospace;
+    font-weight: lighter;
+    font-size: 15px;
+    font-style: italic;
+  }
+}
