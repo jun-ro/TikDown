@@ -1,7 +1,7 @@
 const express = require("express");
 const request = require("request");
 const fs = require("fs");
-const tiktok = require("tikchan");
+const tiktok = require("tiktok-video-downloader");
 const app = express();
 const path = require("path");
 const port = 6969;
@@ -21,9 +21,9 @@ app.get("/scripts", function (req, res) {
 });
 
 app.get("/getVideo", function (req, res) {
-  var url = req.query.url.toString();
+  var urlId = req.query.url.toString();
   function downloadVideo(videoURL) {
-    request.get({ uri: videoURL, encoding: null}, (err, response, body) => {
+    request.get({ uri: videoURL, encoding: null }, (err, response, body) => {
       if (err) {
         console.error(err);
         return res.sendStatus(500);
@@ -37,21 +37,18 @@ app.get("/getVideo", function (req, res) {
           return res.sendStatus(500);
         }
         res.setHeader("Content-Type", response.headers["content-type"]);
-        res.setHeader('Content-Disposition', 'attachment; filename="video.mp4"');
+        res.setHeader(
+          "Content-Disposition",
+          'attachment; filename="video.mp4"'
+        );
         res.sendFile(filepath); // send the file to the client
       });
     });
   }
   async function getUrl() {
-    tiktok
-      .download(url)
-      .then((results) => {
-        console.log(results.no_wm.toString());
-        downloadVideo(results.no_wm.toString());
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    tiktok.getInfo(urlId).then((result) => {
+      downloadVideo(result.video.url.no_wm.toString());
+    });
   }
   getUrl();
 });
