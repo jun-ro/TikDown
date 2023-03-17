@@ -11,9 +11,6 @@
   "description": "",
   "dependencies": {
     "express": "^4.18.2",
-    "tikchan": "^1.0.1",
-    "tiktok-scraper-without-watermark-fixed": "^1.1.10",
-    "tiktok-video-downloader": "^1.0.2",
-    "ttsave": "^1.1.1"
+    "tiktok-video-downloader": "^1.0.2"
   }
 }
