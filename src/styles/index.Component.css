@@ -76,7 +76,7 @@ body {
 }
 
 @media only screen and (max-width: 375px) and (max-height: 667px) {
-  .input-wrapper > input {
+  #url {
     color: white;
     background-color: transparent;
     border-radius: 25px;
@@ -85,10 +85,10 @@ body {
     width: 300px;
     height: 6.5vw;
     text-indent: 15px;
-    transform: translate(0vw, 30vw);
+    transform: translate(0vw, 20vw);
     outline: none;
   }
-  .input-wrapper > button {
+  #download {
     color: white;
     background-color: rgb(30, 30, 30);
     border-radius: 25px;
@@ -98,14 +98,14 @@ body {
     height: 20vw;
     text-indent: 15px;
     outline: none;
-    transform: translate(0vw, 40vw);
+    transform: translate(0vw, 22.5vw);
     transition: 0.3s;
     font-size: 25px;
     font-family: "Roboto", monospace;
     cursor: pointer;
   }
 
-  .input-wrapper > button:hover {
+  #url:hover {
     color: white;
     background-color: rgb(30, 30, 30);
     border-radius: 25px;
@@ -115,16 +115,16 @@ body {
     height: 20.5vw;
     text-indent: 15px;
     outline: none;
-    transform: translate(0vw, 40vw);
+    transform: translate(0vw, 22.5vw);
   }
 
-  .title > h1 {
+  #tikdown {
     color: white;
     font-family: "Roboto", monospace;
     font-size: 20vw;
     transform: translate(0vw, 30vw);
   }
-  .title > h3 {
+  #footer{
     color: white;
     transform: translate(0vw, 20vw);
     font-family: "Roboto", monospace;

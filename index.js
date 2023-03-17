@@ -3,6 +3,7 @@ const request = require("request");
 const fs = require("fs");
 const tiktok = require("tiktok-video-downloader");
 const app = express();
+const https = require("https");
 const path = require("path");
 const port = 6969;
 
@@ -52,6 +53,25 @@ app.get("/getVideo", function (req, res) {
   }
   getUrl();
 });
+
+app.get("/handleTurl", function (req, res) {
+  var url = req.query.url.toString();
+  https
+    .get(url, (response) => {
+      if (
+        response.statusCode >= 300 &&
+        response.statusCode < 400 &&
+        response.headers.location
+      ) {
+        const finalUrl = response.headers.location;
+        res.send(finalUrl.toString());
+      }
+    })
+    .on("error", (err) => {
+      console.error(`Error: ${err.message}`);
+    });
+});
+
 
 app.listen(port, () => {
   console.log(`App running on ${port}`);
